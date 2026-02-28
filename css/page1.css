@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    background: black;
+    color: lime;
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.back {
+    display: inline-block;
+    margin-top: 20px;
+    color: lime;
+    text-decoration: none;
+    border: 1px solid lime;
+    padding: 8px 15px;
+}
