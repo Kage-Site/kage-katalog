@@ -1,0 +1,419 @@
+/* Базовые настройки под мобилки */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', 'Segoe UI', Roboto, sans-serif;
+    -webkit-tap-highlight-color: transparent; /* Убирает синий квадрат при тапе на мобиле */
+}
+
+body {
+    background-color: #040406;
+    color: #e0e0e0;
+    line-height: 1.4;
+    overflow-x: hidden;
+}
+
+#tsparticles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0; left: 0;
+    z-index: -2;
+    filter: blur(0.5px);
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Фикс верхней плашки для телефонов */
+header {
+    background-color: rgba(10, 10, 12, 0.96);
+    border-bottom: 1px solid #1a1a22;
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    backdrop-filter: blur(12px);
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.logo-sub { color: #00adb5; }
+
+.currency-rate {
+    background: linear-gradient(135deg, #111, #16161c);
+    padding: 5px 14px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 173, 181, 0.3);
+    font-size: 12px;
+    color: #fff;
+    font-weight: 600;
+}
+
+nav {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+}
+
+nav a {
+    color: #888;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 6px 16px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.01);
+    border: 1px solid #15151c;
+    transition: all 0.15s ease;
+}
+
+nav a:hover, nav a.active {
+    color: #fff;
+    background: #00adb5;
+    border-color: #00adb5;
+}
+
+/* ТАКТИЛЬНЫЙ ОТКЛИК НА СМАРТФОНАХ */
+nav a:active, .card:active, .filter-btn:active, .category-card:active, .modal-close:active, .modal-buy-btn:active {
+    transform: scale(0.96) !important;
+}
+
+/* Главная страница */
+.hero-section { text-align: center; margin: 35px 0; }
+.hero-section h1 { font-size: 38px; font-weight: 900; color: #fff; text-transform: uppercase; }
+.hero-text { font-size: 14px; color: #8a8a93; max-width: 450px; margin: 8px auto 0; }
+.section-title { text-align: center; margin-bottom: 20px; font-size: 20px; text-transform: uppercase; color: #fff; }
+.categories-grid { display: flex; flex-direction: column; gap: 15px; margin-bottom: 40px; }
+
+.category-card {
+    background: rgba(15, 15, 20, 0.7);
+    border: 1px solid #1c1c24;
+    border-radius: 14px;
+    padding: 30px 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    transition: transform 0.1s;
+}
+
+.category-icon { font-size: 40px; margin-bottom: 8px; display: block; }
+.category-card p { color: #71717a; font-size: 13px; }
+
+/* Настройки Горизонтального Фильтра */
+.page-header { margin: 25px 0 20px; display: flex; flex-direction: column; gap: 12px; }
+.page-title { font-size: 26px; font-weight: 900; align-self: flex-start; }
+.search-container { width: 100%; }
+#itemSearch {
+    background-color: #0f0f13;
+    border: 1px solid #1c1c24;
+    color: #fff;
+    padding: 12px 16px;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 14px;
+}
+#itemSearch:focus { outline: none; border-color: #00adb5; }
+
+.filter-scroll {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    width: 100%;
+    padding: 4px 0;
+    scrollbar-width: none;
+}
+.filter-scroll::-webkit-scrollbar { display: none; }
+
+.filter-btn {
+    background: #0f0f13;
+    border: 1px solid #1c1c24;
+    color: #8a8a93;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: all 0.2s;
+}
+.filter-btn.active { background: #fff; color: #000; border-color: #fff; }
+
+/* Цвета названий фильтров */
+.text-common { color: #888; }
+.text-rare { color: #0070dd; }
+.text-epic { color: #a335ee; }
+.text-legendary { color: #ff8000; }
+.text-divine { color: #ffffff; }
+.text-cosmic { color: #be9eff; }
+
+/* Сетка каталога */
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Ровно 2 карточки в ряд */
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+/* КРУТОЙ РЕДИЗАЙН КАРТОЧЕК С НЕОНОВЫМ ТУМАНОМ (GLOW) */
+.card {
+    background-color: #0a0a0f;
+    border: 2px solid #14141a;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: transform 0.1s ease, border-color 0.3s;
+}
+
+/* Создаем скрытый размытый туман сзади карточки */
+.card::before {
+    content: '';
+    position: absolute;
+    top: 5%; left: 5%; right: 5%; bottom: 5%;
+    z-index: -1;
+    filter: blur(20px);
+    opacity: 0;
+    border-radius: 14px;
+    transition: opacity 0.3s ease;
+}
+
+/* Активация тумана при наведении/появлении */
+.card:hover::before, .card:active::before { opacity: 0.5; }
+
+.card-img-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    background-color: #121218;
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+    overflow: hidden; /* Картинка обрезается правильно */
+}
+
+.card-img {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    object-fit: cover;
+}
+
+.card-rarity {
+    position: absolute;
+    bottom: 6px; left: 6px;
+    background-color: rgba(0,0,0,0.85);
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-size: 8px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.card-content {
+    padding: 10px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.card-header { display: flex; flex-direction: column; }
+.card-title { font-size: 13px; font-weight: 700; color: #fff; line-height: 1.2; }
+.card-number { color: #4e4e5a; font-size: 10px; font-weight: 700; margin-top: 2px; }
+
+.card-prices {
+    background-color: rgba(255,255,255,0.02);
+    border-radius: 6px;
+    padding: 5px 8px;
+    border: 1px solid rgba(255,255,255,0.04);
+}
+.price-kk { color: #00adb5; font-weight: 800; font-size: 14px; }
+.price-diamonds { color: #ffb800; font-size: 10px; font-weight: 600; }
+
+/* ==========================================================================
+   СИСТЕМА РЕДКОСТЕЙ С ОБЪЕМНЫМ СВЕЧЕНИЕМ
+   ========================================================================== */
+
+/* Обычный */
+.rarity-common { border-color: #22222a; }
+.rarity-common::before { background: #444; }
+.rarity-common .card-rarity { color: #888; }
+
+/* Редкий */
+.rarity-rare { border-color: #0070dd; box-shadow: inset 0 0 10px rgba(0, 112, 221, 0.2); }
+.rarity-rare::before { background: #0070dd; filter: blur(25px); }
+.rarity-rare .card-rarity { color: #0070dd; }
+
+/* Эпический */
+.rarity-epic { border-color: #a335ee; box-shadow: inset 0 0 12px rgba(163, 53, 238, 0.25); }
+.rarity-epic::before { background: #a335ee; filter: blur(25px); }
+.rarity-epic .card-rarity { color: #a335ee; }
+
+/* Легендарный */
+.rarity-legendary { border-color: #ff8000; box-shadow: inset 0 0 15px rgba(255, 128, 0, 0.3); }
+.rarity-legendary::before { background: #ff8000; filter: blur(30px); }
+.rarity-legendary .card-rarity { color: #ff8000; }
+
+/* Божественный */
+.rarity-divine { border-color: #ffffff; box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.3); }
+.rarity-divine::before { background: #ffffff; filter: blur(35px); }
+.rarity-divine .card-rarity { color: #ffffff; }
+
+/* Космический (Убавлено размытие текста, усилена бездна рамки) */
+.rarity-cosmic { 
+    border-color: #4a00e0;
+    background: linear-gradient(135deg, #020005, #0a0016);
+    box-shadow: inset 0 0 15px rgba(142, 45, 226, 0.4);
+    animation: cosmic-glow-pulse 2.5s infinite alternate;
+}
+.rarity-cosmic::before { background: linear-gradient(to right, #8e2de2, #4a00e0); filter: blur(30px); opacity: 0.2; }
+.rarity-cosmic:hover::before { opacity: 0.6; }
+/* Текст теперь ЧЕТКИЙ */
+.rarity-cosmic .card-rarity { color: #be9eff; text-shadow: 0 0 3px #4a00e0; }
+
+@keyframes cosmic-glow-pulse {
+    0% { border-color: #4a00e0; box-shadow: 0 0 8px rgba(74,0,224,0.4), inset 0 0 10px rgba(142, 45, 226, 0.3); }
+    100% { border-color: #8e2de2; box-shadow: 0 0 16px rgba(142,45,226,0.6), inset 0 0 15px rgba(74, 0, 224, 0.5); }
+}
+
+/* ==========================================================================
+   МОБИЛЬНОЕ МОДАЛЬНОЕ ОКНО (POPUP)
+   ========================================================================== */
+.modal {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(3, 3, 5, 0.92);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+.modal.active { display: flex; }
+
+.modal-content {
+    background-color: #0b0b10;
+    border: 2px solid #1c1c26;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 360px;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+    animation: modalSlideUp 0.25s cubic-bezier(0.1, 0.8, 0.2, 1);
+}
+
+@keyframes modalSlideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-close {
+    position: absolute;
+    top: 12px; right: 12px;
+    background: rgba(0,0,0,0.6);
+    border: 1px solid #222;
+    color: #fff;
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+    z-index: 10;
+    transition: transform 0.1s;
+}
+
+.modal-img-container {
+    position: relative;
+    width: 100%;
+    padding-top: 85%;
+    background-color: #121218;
+}
+#modalImg {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    object-fit: cover;
+}
+
+.modal-rarity-badge {
+    position: absolute;
+    bottom: 12px; left: 12px;
+    background: #000;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.modal-info { padding: 18px; }
+.modal-meta { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px; }
+#modalTitle { font-size: 18px; font-weight: 800; color: #fff; }
+#modalNum { color: #52525b; font-weight: 700; font-size: 14px; }
+
+.modal-prices-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.modal-price {
+    background: #111116;
+    border: 1px solid #1c1c24;
+    padding: 8px;
+    border-radius: 8px;
+}
+.modal-price small { display: block; color: #71717a; font-size: 9px; text-transform: uppercase; margin-bottom: 2px;}
+.modal-price span { font-weight: 800; font-size: 15px; }
+#modalKk { color: #00adb5; }
+#modalDia { color: #ffb800; }
+
+.modal-divider { height: 1px; background: #1c1c24; margin: 15px 0; }
+.modal-info h3 { font-size: 12px; color: #71717a; text-transform: uppercase; margin-bottom: 6px; letter-spacing: 0.5px;}
+#modalDesc { font-size: 13px; color: #d4d4d8; line-height: 1.5; }
+.modal-specs { font-size: 12px; color: #00adb5; font-weight: 600; background: rgba(0,173,181,0.05); padding: 8px; border-radius: 6px; }
+
+.modal-buy-btn {
+    display: block;
+    background: #fff;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 800;
+    padding: 14px;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-size: 14px;
+    box-shadow: 0 5px 15px rgba(255,255,255,0.1);
+    transition: transform 0.1s;
+}
+
+/* Развертка для планшетов */
+@media (min-width: 600px) {
+    .header-content { flex-direction: row; justify-content: space-between; }
+    .categories-grid { flex-direction: row; }
+    .category-card { flex: 1; }
+    .catalog-grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+}
