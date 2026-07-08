@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редкие предметы — DarkHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">DarkHub</a>
+            <div class="currency-rate">
+                <span>Курс:</span>
+                <span class="rate-value">10 Алмазов = 1 K&K</span>
+            </div>
+            <nav>
+                <a href="index.html">На главную</a>
+                <a href="catalog1.html" class="active">Каталог 1</a>
+                <a href="catalog2.html">Каталог 2</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="page-header">
+            <h1 class="page-title">Редкие предметы</h1>
+            <div class="search-container">
+                <input type="text" id="itemSearch" placeholder="Поиск по номеру (например, 001)">
+            </div>
+        </div>
+        
+        <div class="catalog-grid" id="catalogGrid">
+            
+            <div class="card rarity-common">
+                <div class="card-img-wrapper">
+                    <img src="https://via.placeholder.com/300x300.png?text=Common" class="card-img">
+                    <div class="card-rarity">Обычный</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header"><h3 class="card-title">Ржавый нож</h3><span class="card-number">#001</span></div>
+                    <div class="card-prices"><div class="price-kk">1 K&K</div><div class="price-diamonds">10 Алмазов</div></div>
+                </div>
+            </div>
+
+            <div class="card rarity-rare">
+                <div class="card-img-wrapper">
+                    <img src="https://via.placeholder.com/300x300.png?text=Rare" class="card-img">
+                    <div class="card-rarity">Редкий</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header"><h3 class="card-title">Острый кинжал</h3><span class="card-number">#002</span></div>
+                    <div class="card-prices"><div class="price-kk">5 K&K</div><div class="price-diamonds">50 Алмазов</div></div>
+                </div>
+            </div>
+
+            <div class="card rarity-epic">
+                <div class="card-img-wrapper">
+                    <img src="https://via.placeholder.com/300x300.png?text=Epic" class="card-img">
+                    <div class="card-rarity">Эпический</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header"><h3 class="card-title">Магический посох</h3><span class="card-number">#003</span></div>
+                    <div class="card-prices"><div class="price-kk">20 K&K</div><div class="price-diamonds">200 Алмазов</div></div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="js/search.js"></script>
+</body>
+</html>

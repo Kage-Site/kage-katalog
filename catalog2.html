@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Транспорт — DarkHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">DarkHub</a>
+            <div class="currency-rate">
+                <span>Курс:</span>
+                <span class="rate-value">10 Алмазов = 1 K&K</span>
+            </div>
+            <nav>
+                <a href="index.html">На главную</a>
+                <a href="catalog1.html">Каталог 1</a>
+                <a href="catalog2.html" class="active">Каталог 2</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="page-header">
+            <h1 class="page-title">Транспорт</h1>
+            <div class="search-container">
+                <input type="text" id="itemSearch" placeholder="Поиск по номеру (например, 004)">
+            </div>
+        </div>
+        
+        <div class="catalog-grid" id="catalogGrid">
+            
+            <div class="card rarity-legendary">
+                <div class="card-img-wrapper">
+                    <img src="https://via.placeholder.com/300x300.png?text=Legendary" class="card-img">
+                    <div class="card-rarity">Легендарный</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header"><h3 class="card-title">Спорткар "Мустанг"</h3><span class="card-number">#004</span></div>
+                    <div class="card-prices"><div class="price-kk">100 K&K</div><div class="price-diamonds">1000 Алмазов</div></div>
+                </div>
+            </div>
+
+            <div class="card rarity-divine">
+                <div class="card-img-wrapper">
+                    <img src="https://via.placeholder.com/300x300.png?text=Divine" class="card-img">
+                    <div class="card-rarity">Божественный</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header"><h3 class="card-title">Нимбоцикл Х-1</h3><span class="card-number">#005</span></div>
+                    <div class="card-prices"><div class="price-kk">500 K&K</div><div class="price-diamonds">5000 Алмазов</div></div>
+                </div>
+            </div>
+
+            <div class="card rarity-cosmic">
+                <div class="card-img-wrapper">
+                    <img src="https://via.placeholder.com/300x300.png?text=Cosmic" class="card-img">
+                    <div class="card-rarity">Космический</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header"><h3 class="card-title">Гиперкар "Пустота"</h3><span class="card-number">#006</span></div>
+                    <div class="card-prices"><div class="price-kk">999 K&K</div><div class="price-diamonds">9990 Алмазов</div></div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="js/search.js"></script>
+</body>
+</html>
