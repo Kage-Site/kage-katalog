@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Детали — KageCorp Katalog</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+</head>
+<body>
+
+    <div id="tsparticles"></div>
+
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">KageCorp <span class="logo-sub">Katalog</span></a>
+            <div class="currency-rate">
+                <span>Курс: 10 Алмазов = 1 K&K</span>
+            </div>
+            <nav>
+                <a href="index.html">Главная</a>
+                <a href="catalog1.html" class="active">Детали</a>
+                <a href="catalog2.html">Сборки</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="page-header">
+            <h1 class="page-title">Детали</h1>
+            <div class="search-container">
+                <input type="text" id="itemSearch" placeholder="Поиск по названию или номеру...">
+            </div>
+            
+            <!-- Полный фильтр по всем 6 редкостям -->
+            <div class="filter-scroll">
+                <button class="filter-btn active" data-filter="all">Все</button>
+                <button class="filter-btn text-common" data-filter="common">Обычные</button>
+                <button class="filter-btn text-rare" data-filter="rare">Редкие</button>
+                <button class="filter-btn text-epic" data-filter="epic">Эпические</button>
+                <button class="filter-btn text-legendary" data-filter="legendary">Легендарные</button>
+                <button class="filter-btn text-divine" data-filter="divine">Божественные</button>
+                <button class="filter-btn text-cosmic" data-filter="cosmic">Космические</button>
+            </div>
+        </div>
+        
+        <div class="catalog-grid" id="catalogGrid">
+            
+            <!-- 1. Обычная деталь -->
+            <div class="card rarity-common" data-rarity="common" 
+                 data-title="Чорный Пин" data-num="#001" 
+                 data-img="ЧорныйПин.jpg"
+                 data-kk="0.1 K&K" data-dia="1 Алмаз"
+                 data-desc="Обычный пин для збоки лего техники. Подходит для больших зборок и может быть использован в различных механизмах"
+                 data-specs="Материал: Пластик; Размер: 1x2; Цвет: Чёрный">
+                <div class="card-img-wrapper">
+                    <img src="ЧорныйПин.jpg" class="card-img">
+                    <div class="card-rarity">Обычный</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header"><h3 class="card-title">Чорный Пин</h3><span class="card-number">#001</span></div>
+                    <div class="card-prices"><div class="price-kk">0.1 K&K</div><div class="price-diamonds">1 Алмаз</div></div>
+                </div>
+            </div>
+             <!-- 2. Редкая деталь -->
+            <div class="card rarity-rare" data-rarity="rare" 
+                 data-title="Батарейка" data-num="#002" 
+                 data-img="Батарейка.jpg"
+                 data-kk="1 K&K" data-dia="10 Алмазов"
+                 data-desc="Второстепенная валюта для покупки и продажи деталей. Используется в качестве источника энергии для различных механизмов."
+                 data-specs="Материал: Пластик; Размер: 1x2; Цвет: Красный;">
+                <div class="card-img-wrapper">
+                    <img src="Батарейка.jpg" class="card-img">
+                    <div class="card-rarity">Редкий</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header"><h3 class="card-title">Батарейка</h3><span class="card-number">#002</span></div>
+                    <div class="card-prices"><div class="price-kk">1 K&K</div><div class="price-diamonds">10 Алмазов</div></div>
+                </div>
+            </div>
+            <!-- 2. Редкая деталь -->
+            <div class="card rarity-rare" data-rarity="rare" 
+                 data-title="Пушка" data-num="#009" 
+                 data-img="Пушка.jpg"
+                 data-kk="2 K&K" data-dia="20 Алмазов"
+                 data-desc="Поломаная пушка, которая может быть использована в качестве оружия или декоративного элемента. Отличается высокой ценностью и редкостью."
+                 data-specs="Материал: Металл; Размер: 2x6; Цвет: Чёрный;">
+                <div class="card-img-wrapper">
+                    <img src="Пушка.jpg" class="card-img">
+                    <div class="card-rarity">Редкий</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header"><h3 class="card-title">Пушка</h3><span class="card-number">#009</span></div>
+                    <div class="card-prices"><div class="price-kk">2 K&K</div><div class="price-diamonds">20 Алмазов</div></div>
+                </div>
+            </div>
+            <!-- 3. Эпическая деталь -->
+            <div class="card rarity-epic" data-rarity="epic" 
+                 data-title="Незеритовый слиток" data-num="#003" 
+                 data-img="НезеритовыйСлиток.jpg"
+                 data-kk="9 K&K" data-dia="90 Алмазов"
+                 data-desc="Эпический незеритовый слиток — редкий и ценный материал, используемый для создания высококачественных деталей и механизмов. Отличается высокой прочностью и долговечностью."
+                 data-specs="Материал: Незерит; Размер: 1x2; Цвет: Чорный с металлическим блеском;">
+                <div class="card-img-wrapper">
+                    <img src="НезеритовыйСлиток.jpg" class="card-img">
+                    <div class="card-rarity">Эпический</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header"><h3 class="card-title">Незеритовый слиток</h3><span class="card-number">#003</span></div>
+                    <div class="card-prices"><div class="price-kk">9 K&K</div><div class="price-diamonds">90 Алмазов</div></div>
+                </div>
+            </div>
+             <!-- 3. Эпическая деталь -->
+            <div class="card rarity-epic" data-rarity="epic" 
+                 data-title="Лodка 807" data-num="#007" 
+                 data-img="Лодка 807.jpg"
+                 data-kk="8 K&K" data-dia="80 Алмазов"
+                 data-desc="Эпическая лoдка 807 — редкая и ценный транспортное средство, используемое для путешествий по воде. Отличается высокой скоростью и маневренностью."
+                 data-specs="Материал: Пластик; Размер: 10x22; Цвет: Оранжевый; Особенности: Водонепроницаемость, лёгкость, долговечность;">
+                <div class="card-img-wrapper">
+                    <img src="Лодка 807.jpg" class="card-img">
+                    <div class="card-rarity">Эпический</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header"><h3 class="card-title">Лoдка 807</h3><span class="card-number">#007</span></div>
+                    <div class="card-prices"><div class="price-kk">8 K&K</div><div class="price-diamonds">80 Алмазов</div></div>
+                </div>
+            </div>
+
+            <!-- 4. Легендарная деталь -->
+            <div class="card rarity-legendary" data-rarity="legendary" 
+                 data-title="Плазменное крыло" data-num="#004" 
+                 data-img="ПлазмаКрыло.jpg"
+                 data-kk="70 K&K" data-dia="700 Алмазов"
+                 data-desc="Легендарное плазменное крыло — уникальная деталь, предназначенная для создания эксклюзивных крыльев с плазменным эффектом. Отличается высокой ценностью и редкостью."
+                 data-specs="Материал: Плазма; Размер: 5x7x1; Цвет: Синий с фиолетовым свечением;">
+                <div class="card-img-wrapper">
+                    <img src="ПлазмаКрыло.jpg" class="card-img">
+                    <div class="card-rarity">Легендарный</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header"><h3 class="card-title">Плазменное крыло</h3><span class="card-number">#004</span></div>
+                    <div class="card-prices"><div class="price-kk">70 K&K</div><div class="price-diamonds">700 Алмазов</div></div>
+                </div>
+            </div>
+            <!-- 4. Легендарная деталь -->
+            <div class="card rarity-legendary" data-rarity="legendary" 
+                 data-title="Золотой нагрудник" data-num="#008" 
+                 data-img="ЗолотойНагрудник.jpg"
+                 data-kk="40 K&K" data-dia="400 Алмазов"
+                 data-desc="Легендарный золотой нагрудник — уникальная деталь, предназначенная для защиты и красоты пользователя."
+                 data-specs="Материал: Небесное золото; Размер: 2x2; Цвет: Золотой; Особенности: Лёгкость, блеск, долговечность;">
+                <div class="card-img-wrapper">
+                    <img src="ЗолотойНагрудник.jpg" class="card-img">
+                    <div class="card-rarity">Легендарный</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header"><h3 class="card-title">Золотой нагрудник</h3><span class="card-number">#008</span></div>
+                    <div class="card-prices"><div class="price-kk">20 K&K</div><div class="price-diamonds">200 Алмазов</div></div>
+                </div>
+            </div>
+
+            <!-- 5. Божественная деталь -->
+            <div class="card rarity-divine" data-rarity="divine" 
+                 data-title="Золотое крыло" data-num="#005" 
+                 data-img="ЗолотоеКрыло.jpg"
+                 data-kk="240 K&K" data-dia="2400 Алмазов"
+                 data-desc="Божественное золотое крыло — уникальная деталь, предназначенная для создания эксклюзивных золотых крыльев. Отличается высокой ценностью и редкостью."
+                 data-specs="Материал: Небесное золото; Размер: 6x9x1; Цвет: Золотой; Особенности: Лёгкость, блеск, долговечность;">
+                <div class="card-img-wrapper">
+                    <img src="ЗолотоеКрыло.jpg" class="card-img">
+                    <div class="card-rarity">Божественный</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header"><h3 class="card-title">Золотое крыло</h3><span class="card-number">#005</span></div>
+                    <div class="card-prices"><div class="price-kk">240 K&K</div><div class="price-diamonds">2400 Алмазов</div></div>
+                </div>
+            </div>
+            <!-- 5. Божественная деталь -->
+            <div class="card rarity-divine" data-rarity="divine" 
+                 data-title="Костюм Кружитцу" data-num="#010" 
+                 data-img="КостюмКружытцу.jpg"
+                 data-kk="320 K&K" data-dia="3200 Алмазов"
+                 data-desc="Божественный костюм Кружитцу — уникальный костюм, который дает пользователю возможность использовать техники ниндзя Кружитцу. Отличается высокой ценностью и редкостью."
+                 data-specs="Материал: Небесная Аура; Размер: 2х3; Цвет: Огненный; Особенности: Лёгкость, блеск, долговечность;">
+                <div class="card-img-wrapper">
+                    <img src="КостюмКружытцу.jpg" class="card-img">
+                    <div class="card-rarity">Божественный</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header"><h3 class="card-title">Костюм Кружитцу</h3><span class="card-number">#010</span></div>
+                    <div class="card-prices"><div class="price-kk">320 K&K</div><div class="price-diamonds">3200 Алмазов</div></div>
+                </div>
+            </div>
+
+            <!-- 6. Космическая деталь -->
+            <div class="card rarity-cosmic" data-rarity="cosmic" 
+                 data-title="Маска полета" data-num="#006" 
+                 data-img="Маска Полета.jpg"
+                 data-kk="500 K&K" data-dia="5000 Алмазов"
+                 data-desc="Космическая маска полета — уникальная деталь, предназначенная для использования в сражениях в небе. Обеспечивает защиту и мобильность."
+                 data-specs="Материал: Неизвестный; Размер: Универсальный; Цвет: Чорно-белый;">
+                <div class="card-img-wrapper">
+                    <img src="Маска Полета.jpg" class="card-img">
+                    <div class="card-rarity">Космический</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header"><h3 class="card-title">Маска полета</h3><span class="card-number">#006</span></div>
+                    <div class="card-prices"><div class="price-kk">500 K&K</div><div class="price-diamonds">5000 Алмазов</div></div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </main>
+ 
+    <div id="itemModal" class="modal">
+        <div class="modal-content">
+            <button id="modalClose" class="modal-close">&times;</button>
+            <div class="modal-img-container">
+                <img id="modalImg" src="" alt="Товар">
+                <div id="modalRarity" class="modal-rarity-badge">РЕДКОСТЬ</div>
+            </div>
+            <div class="modal-info">
+                <div class="modal-meta">
+                    <h2 id="modalTitle">Название товара</h2>
+                    <span id="modalNum">#000</span>
+                </div>
+                <div class="modal-prices-block">
+                    <div class="modal-price"><small>Цена в K&K</small><span id="modalKk">0 K&K</span></div>
+                    <div class="modal-price"><small>Цена в Алмазах</small><span id="modalDia">0 Алмазов</span></div>
+                </div>
+                <div class="modal-divider"></div>
+                <h3>Описание:</h3>
+                <p id="modalDesc">Тут будет описание...</p>
+                <div class="modal-divider"></div>
+                <h3>Характеристики:</h3>
+                <p id="modalSpecs" class="modal-specs">Тут будут ТТХ...</p>
+                <a href="https://t.me/IamMiDav" target="_blank" class="modal-buy-btn">Связаться для покупки</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/catalog-logic.js"></script>
+    <script src="js/particles-config.js"></script>
+</body>
+</html>

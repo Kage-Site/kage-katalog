@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сборки — KageCorp Katalog</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+</head>
+<body>
+
+    <div id="tsparticles"></div>
+
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">KageCorp <span class="logo-sub">Katalog</span></a>
+            <div class="currency-rate">
+                <span>Курс: 10 Алмазов = 1 K&K</span>
+            </div>
+            <nav>
+                <a href="index.html">Главная</a>
+                <a href="catalog1.html">Детали</a>
+                <a href="catalog2.html" class="active">Сборки</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="page-header">
+            <h1 class="page-title">Сборки</h1>
+            <div class="search-container">
+                <input type="text" id="itemSearch" placeholder="Поиск по названию или номеру...">
+            </div>
+            
+            <!-- Полный фильтр по всем 6 редкостям -->
+            <div class="filter-scroll">
+                <button class="filter-btn active" data-filter="all">Все</button>
+                <button class="filter-btn text-common" data-filter="common">Обычные</button>
+                <button class="filter-btn text-rare" data-filter="rare">Редкие</button>
+                <button class="filter-btn text-epic" data-filter="epic">Эпические</button>
+                <button class="filter-btn text-legendary" data-filter="legendary">Легендарные</button>
+                <button class="filter-btn text-divine" data-filter="divine">Божественные</button>
+                <button class="filter-btn text-cosmic" data-filter="cosmic">Космические</button>
+            </div>
+        </div>
+        
+        <div class="catalog-grid" id="catalogGrid">
+            
+            
+
+            <!-- 3. Эпическая сборка -->
+            <div class="card rarity-epic" data-rarity="epic" 
+                 data-title="Ультра велосипед" data-num="#013" 
+                 data-img="УльтраВелосипед.jpg"
+                 data-kk="11 K&K" data-dia="110 Алмазов"
+                 data-desc="Ультра велосипед для скоростной езды. Отлично подходит для гонок и путешествий по пересечённой местности."
+                 data-specs="Материал: Алюминий; Колёса: 26 дюймов; Цвет: Оранжевый; Передачи: 21 скорость; Тормоза: Дисковые">
+                <div class="card-img-wrapper">
+                    <img src="УльтраВелосипед.jpg" class="card-img">
+                    <div class="card-rarity">Эпический</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header"><h3 class="card-title">Ультра велосипед</h3><span class="card-number">#013</span></div>
+                    <div class="card-prices"><div class="price-kk">11 K&K</div><div class="price-diamonds">110 Алмазов</div></div>
+                </div>
+            </div>
+            <!-- 3. Эпическая сборка -->
+            <div class="card rarity-epic" data-rarity="epic" 
+                 data-title="Телефон Супер Кул 21 ККТ" data-num="#016" 
+                 data-img="СуперКул21ККТ.jpg"
+                 data-kk="12 K&K" data-dia="120 Алмазов"
+                 data-desc="Телефон Супер Кул 21 ККТ — эпическая сборка, которая сочетает в себе стильный дизайн и передовые технологии. Отлично подходит для повседневного использования и развлечений."
+                 data-specs="Материал: Титан; Размер: 6х2 см; Цвет: КЗС; Особенности: Сенсорный экран, 5G поддержка">
+                <div class="card-img-wrapper">
+                    <img src="СуперКул21ККТ.jpg" class="card-img">
+                    <div class="card-rarity">Эпический</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header"><h3 class="card-title">Телефон Супер Кул 21 ККТ</h3><span class="card-number">#016</span></div>
+                    <div class="card-prices"><div class="price-kk">12 K&K</div><div class="price-diamonds">120 Алмазов</div></div>
+                </div>
+            </div>
+            <!-- 3. Эпическая сборка -->
+            <div class="card rarity-epic" data-rarity="epic" 
+                 data-title="Телефон Каге Фон 3" data-num="#015" 
+                 data-img="КагеФон3.jpg"
+                 data-kk="12 K&K" data-dia="120 Алмазов"
+                 data-desc="Телефон Каге Фон 3 — эпическая сборка, которая сочетает в себе стильный дизайн и передовые технологии. Отлично подходит для повседневного использования и развлечений."
+                 data-specs="Материал: Паладий; Размер: 5х2 см; Цвет: КЗС; Особенности: Сенсорный экран, 5G поддержка, рациональная батарея, водонепроницаемость, антена для связи с KageCorp">
+                <div class="card-img-wrapper">
+                    <img src="КагеФон3.jpg" class="card-img">
+                    <div class="card-rarity">Эпический</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header"><h3 class="card-title">Телефон Каге Фон 3</h3><span class="card-number">#015</span></div>
+                    <div class="card-prices"><div class="price-kk">12 K&K</div><div class="price-diamonds">120 Алмазов</div></div>
+                </div>
+            </div>
+
+            <!-- 4. Легендарная сборка -->
+            <div class="card rarity-legendary" data-rarity="legendary" 
+                 data-title="Тяпа Ган" data-num="#014" 
+                 data-img="ТяпаГан.jpg"
+                 data-kk="Был Уничтожен" data-dia="0 Алмазов"
+                 data-desc="Легендарный ТяпаГан — уникальная пушка, которая сочетает в себе мощь и стиль. Идеальна для коллекционеров и любителей эксклюзивных предметов."
+                 data-specs="Материал: Сталь; Калибр: зеленая резинка; Длина ствола: 39 см; Цвет: Чорно-белый; Особенности: Прицел, регулируемая рукоятка">
+                <div class="card-img-wrapper">
+                    <img src="ТяпаГан.jpg" class="card-img">
+                    <div class="card-rarity">Легендарный</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header"><h3 class="card-title">Тяпа Ган</h3><span class="card-number">#014</span></div>
+                    <div class="card-prices"><div class="price-kk">Был Уничтожен</div><div class="price-diamonds">0 Алмазов</div></div>
+                </div>
+            </div>
+            <!-- 6. Космическая деталь -->
+            <div class="card rarity-cosmic" data-rarity="cosmic" 
+                 data-title="Золотые Крылья Дракона" data-num="#017" 
+                 data-img="ЗолотыеКрыльяДракона.jpg"
+                 data-kk="550 K&K" data-dia="5500 Алмазов"
+                 data-desc="Космические золотые крылья дракона — уникальная деталь, предназначенная для изящного полета. Отличается высокой ценностью и редкостью."
+                 data-specs="Материал: Небесное золото; Размер: Универсальный; Цвет: Золотой и Аурный;">
+                <div class="card-img-wrapper">
+                    <img src="ЗолотыеКрыльяДракона.jpg" class="card-img">
+                    <div class="card-rarity">Космический</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header"><h3 class="card-title">Золотые Крылья Дракона</h3><span class="card-number">#017</span></div>
+                    <div class="card-prices"><div class="price-kk">550 K&K</div><div class="price-diamonds">5500 Алмазов</div></div>
+                </div>
+            </div>
+
+            
+
+           
+
+        </div>
+    </main>
+
+    <div id="itemModal" class="modal">
+        <div class="modal-content">
+            <button id="modalClose" class="modal-close">&times;</button>
+            <div class="modal-img-container">
+                <img id="modalImg" src="" alt="Товар">
+                <div id="modalRarity" class="modal-rarity-badge">РЕДКОСТЬ</div>
+            </div>
+            <div class="modal-info">
+                <div class="modal-meta">
+                    <h2 id="modalTitle">Название товара</h2>
+                    <span id="modalNum">#000</span>
+                </div>
+                <div class="modal-prices-block">
+                    <div class="modal-price"><small>Цена in K&K</small><span id="modalKk">0 K&K</span></div>
+                    <div class="modal-price"><small>Цена in Алмазов</small><span id="modalDia">0 Алмазов</span></div>
+                </div>
+                <div class="modal-divider"></div>
+                <h3>Описание:</h3>
+                <p id="modalDesc">Тут будет описание...</p>
+                <div class="modal-divider"></div>
+                <h3>Характеристики:</h3>
+                <p id="modalSpecs" class="modal-specs">Тут будут ТТХ...</p>
+                <a href="https://t.me/IamMiDav" target="_blank" class="modal-buy-btn">Связаться для покупки</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/catalog-logic.js"></script>
+    <script src="js/particles-config.js"></script>
+</body>
+</html>
